@@ -157,7 +157,6 @@ def demonstration(): #ДЛЯ ДЕМОНСТРАЦИИ
     
     print("\n3. ПЕРЕМЕШИВАНИЕ:") # 3.Перемешка
     my_playlist.random_shuffle()
-    print("Песни перемешаны")
     my_playlist.display_all()
     
     print("\n4. РЕЖИМ ПОВТОРА:")     # 4.Режим повтора
