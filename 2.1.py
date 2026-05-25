@@ -42,7 +42,6 @@ class MusicPlaylist: #класс для управления плейлисто�
         self.title = title
         self.songs: List[Song] = []
         self.loop_mode: str = 'off' #off, all, on
-        self.now_playing_index: int = 0
     
     def insert_song(self, song: Song) -> None: #добавление в конец
 
@@ -135,15 +134,6 @@ class MusicPlaylist: #класс для управления плейлисто�
         for idx, song in enumerate(self.songs, start=1):
             print(f"{idx}  {song}")
         print()
-    
-    def total_length(self) -> int:
-        return sum(song.length for song in self.songs)
-    def __len__(self) -> int:
-        return len(self.songs)
-    def __str__(self) -> str:
-        total_min = self.total_length() // 60
-        return f"Плейлист '{self.title}': {len(self.songs)} треков, {total_min} минут"
-
 
 def demonstration(): #ДЛЯ ДЕМОНСТРАЦИИ
     
